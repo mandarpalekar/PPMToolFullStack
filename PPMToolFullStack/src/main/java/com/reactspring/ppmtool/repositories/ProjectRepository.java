@@ -8,6 +8,9 @@ import java.util.List;
 
 @Repository
 public interface ProjectRepository extends JpaRepository<Project, Long> {
+
+    Project findByProjectIdentifier(String projectIdentifier);
+
     @Override
-    List<Project> findAllById(Iterable<Long> iterable);
+    List<Project> findAll();
 }
