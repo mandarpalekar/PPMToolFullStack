@@ -15,7 +15,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/project")
+    @RequestMapping("/api/project")
 @Slf4j
 public class ProjectController {
 
@@ -49,12 +49,14 @@ public class ProjectController {
     }
 
     @DeleteMapping("/delete/{projectIdentifier}")
+    @ApiOperation(value = "Delete Project by ID", notes = "Provide an ID to look up a specific project", response = Project.class)
     public  ResponseEntity<?> deleteProjectByIdentifier(@PathVariable String projectIdentifier) {
         projectService.deleteProjectByIdentifier(projectIdentifier);
         return new ResponseEntity<String>("Project with ID: " + projectIdentifier + " deleted successfully",HttpStatus.OK);
     }
 
     @PutMapping("/update/{projectIdentifier}")
+    @ApiOperation(value = "Update Project by ID", notes = "Provide an ID to look up a specific project", response = Project.class)
     public ResponseEntity<?> updateProjectByIdentifier(@PathVariable String projectIdentifier, @Valid @RequestBody Project project,  BindingResult bindingResult) {
         log.info("Project Object: {}", project);
         log.info("Error Map info: {}", errorService.MapValidationService(bindingResult) == null ?
