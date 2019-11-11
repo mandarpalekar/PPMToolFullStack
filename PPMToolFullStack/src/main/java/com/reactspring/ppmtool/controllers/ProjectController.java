@@ -15,7 +15,8 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-    @RequestMapping("/api/project")
+@RequestMapping("/api/project")
+@CrossOrigin
 @Slf4j
 public class ProjectController {
 
