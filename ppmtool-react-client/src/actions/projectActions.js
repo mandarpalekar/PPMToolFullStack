@@ -5,7 +5,7 @@ export const createProject = (project, history) => async dispatch => {
     try{
         const res = await axios.post("http://localhost:8080/api/project/create", project);
         history.push("/dashboard");
-    }catch (error) {
+    } catch (error) {
         dispatch({
             type:GET_ERRORS,
             payload:error.response.data
