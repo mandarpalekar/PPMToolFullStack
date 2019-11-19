@@ -1,0 +1,4 @@
+2019-09-14 19:34:18,368 INFO c.r.p.c.ProjectController [http-nio-8080-exec-1] Project Object: Project(id=null, projectName=Project1, projectIdentifier=ID001, description=Project 1, startDate=null, endDate=null, createdAt=null, updatedAt=null)
+2019-09-14 19:34:18,370 INFO c.r.p.s.MapValidationErrorService [http-nio-8080-exec-1] Binding Result: org.springframework.validation.BeanPropertyBindingResult: 0 errors
+2019-09-14 19:34:18,370 INFO c.r.p.c.ProjectController [http-nio-8080-exec-1] Error Map info: null
+2019-09-14 19:34:18,370 INFO c.r.p.s.MapValidationErrorService [http-nio-8080-exec-1] Binding Result: org.springframework.validation.BeanPropertyBindingResult: 0 errors
